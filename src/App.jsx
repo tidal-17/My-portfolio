@@ -13,7 +13,7 @@ function App() {
   return (
     <Canvas>
       <ambientLight intensity={0.5} />
-      <pointLight position={[10, 10, 10]} />
+      <pointLight position={[10, 20, 10]} />
       <Box />
     </Canvas>
   )
