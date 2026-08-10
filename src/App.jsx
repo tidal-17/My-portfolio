@@ -1,21 +1,21 @@
-import { Canvas } from '@react-three/fiber'
-
-function Box() {
-  return (
-    <mesh rotation={[0.4, 0.4, 0]}>
-      <boxGeometry args={[1, 1, 1]} />
-      <meshStandardMaterial color="orange" />
-    </mesh>
-  )
-}
+import Nav from './components/Nav'
+import Home from './components/Home'
+import About from './components/About'
+import Education from './components/Education'
+import Projects from './components/Projects'
+import Interests from './components/Interests'
 
 function App() {
   return (
-    <Canvas>
-      <ambientLight intensity={0.5} />
-      <pointLight position={[10, 20, 10]} />
-      <Box />
-    </Canvas>
+    <div>
+      <Nav />
+      <Home />
+      <About />
+      <Education />
+      <Projects />
+      <Interests />
+    </div>
   )
 }
+
 export default App
