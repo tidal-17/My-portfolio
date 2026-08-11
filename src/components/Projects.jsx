@@ -1,9 +1,35 @@
+import useScrollFade from '../hooks/useScrollFade'
+
+const projectList = [
+  {
+    title: "Portfolio Website",
+    description: "My first project in coding! — built with React and Three.js, showcasing who I am.",
+    link: "https://github.com/yourusername/my-portfolio"
+  }
+]
+
 function Projects() {
-    return (
-        <section id="Projects">
-            <h2>Projects</h2>
-            <p>This portfolio site is my first project in coding! I have done a project at GIN(global issues network) which involved giving cards made by our entire year to kids in need of extra motivition at thier stay at the hospital and making sure they get the support they need.</p>
+  const [ref, isVisible] = useScrollFade()
+
+  return (
+    <section
+      id="projects"
+      className={`section fade-section ${isVisible ? 'visible' : ''}`}
+      ref={ref}
+    >
+      <h2>Projects</h2>
+      <div className="project-grid">
+        {projectList.map((project, index) => (
+          <div className="project-card" key={index}>
+            <h3>{project.title}</h3>
+            <p>{project.description}</p>
+            <a href={project.link} target="_blank" rel="noopener noreferrer">
+              View on GitHub →
+            </a>
+          </div>
+        ))}
+      </div>
     </section>
-    )
+  )
 }
 export default Projects

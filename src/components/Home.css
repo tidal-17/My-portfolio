@@ -1,0 +1,45 @@
+.home-section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #0a0e1a;
+  background-image: radial-gradient(circle, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+  background-size: 24px 24px;
+  overflow: hidden;
+  isolation: isolate;
+}
+
+.home-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+}
+
+.home-text {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #e5e7eb;
+  pointer-events: none;
+}
+
+.home-text h1 {
+  font-size: 4rem;
+  font-weight: 300;
+  line-height: 1.4;
+  padding: 0.15em 0;
+  margin: 0;
+  background: linear-gradient(90deg, #93c5fd, #f0abfc);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.home-text p {
+  font-size: 1.25rem;
+  color: #9ca3af;
+  margin-top: 0.5rem;
+}
