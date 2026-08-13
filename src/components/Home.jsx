@@ -19,13 +19,11 @@ function DNAHelix() {
     const p1 = new THREE.Vector3(Math.sin(angle) * 1.2, y, Math.cos(angle) * 1.2)
     const p2 = new THREE.Vector3(Math.sin(angle + Math.PI) * 1.2, y, Math.cos(angle + Math.PI) * 1.2)
 
-    // Work out the exact midpoint, length, and rotation needed
-    // so the cylinder sits precisely between p1 and p2
     const mid = new THREE.Vector3().addVectors(p1, p2).multiplyScalar(0.5)
     const direction = new THREE.Vector3().subVectors(p2, p1)
     const length = direction.length()
     const quaternion = new THREE.Quaternion().setFromUnitVectors(
-      new THREE.Vector3(0, 1, 0), // cylinders point "up" by default
+      new THREE.Vector3(0, 1, 0),
       direction.clone().normalize()
     )
 
@@ -63,8 +61,17 @@ function Home() {
         <h1>Vatsin Khakhar</h1>
         <p>IB MYP 4 Student | Aspiring Surgeon & Coder</p>
       </div>
+
+      <a href="#about" className="scroll-hint" aria-label="Scroll to About section">
+      <span>Scroll down</span>
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+      <path d="M12 5v14M19 12l-7 7-7-7"/>
+      </svg>
+     </a>
     </section>
   )
 }
-
 export default Home
+
+
+

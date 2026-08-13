@@ -13,10 +13,10 @@ const educationList = [
     highlight4: "Biology",
     highlight5: "Chemistry",
     highlight6: "Physics",
-    highlight7: "Physical Exercise and Welbieng (PEW)",
-    highlight8: "Buisness mangement",
+    highlight7: "Physical Exercise and Wellbeing (PEW)",
+    highlight8: "Business management",
     highlight9: "Digital design",
-    description: "I am currently 14 years old who has a great intrest in helping people and in the technology all around us."
+    description: "I am a 14 year old who has a great intrest in helping people and in the technology all around us."
   }
 ]
 
